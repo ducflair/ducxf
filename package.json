@@ -1,0 +1,14 @@
+{
+  "name": "ducxf",
+  "version": "0.0.0-development",
+  "private": true,
+  "scripts": {
+    "build": "bash -c 'SETUPTOOLS_SCM_PRETEND_VERSION=${1} uv build' --",
+    "gen:docs": "bun clean:docs && cd docs && uv run make html",
+    "clean:docs": "cd docs && uv run make clean",
+    "semantic-release": "semantic-release"
+  },
+  "devDependencies": {
+    "semantic-release": "^24.1.2"
+  }
+}
